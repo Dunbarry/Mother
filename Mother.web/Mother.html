@@ -6,32 +6,18 @@
   </head>
   <body>
     <script>
-var printOut = [];
-var l=0;
-var j=0;
-
-var string = "Special order 937.";
-var typist = function (){
+  var string = "Special order 937.";
+  var newString=string.split("");
+  var l=0;
   var k=0;
-  while (k<printOut.length){
-	document.write(printOut[k]);
-  k++;
-}
-};
-
-	while(j === 0){
-			for(i = 0; i < string.length; i++){
-				printOut.push(string.charAt(i));
-	}
-	j++;
-	}
-
-		while(l < string.length){
-			var seconds = Math.floor(Math.random()*2000);
-			console.log(seconds);
-			setTimeout(typist, seconds);
-			l++;
-		}
+  var typist = function (){
+    document.write(newString[k]);
+    k++;
+  };
+      for(l=0;l<newString.length; l++){
+        var seconds = Math.floor(Math.random()*2000);
+        setTimeout(typist, seconds);
+      }
     </script>
   </body>
 </html>
